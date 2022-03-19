@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css');
+
+.ra-dropfile {
+  font-family: 'Fredoka', sans-serif;
+  position: relative;
+  width: 100%;
+}
+
+.ra-dropfile input[type=file] {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  cursor: pointer;
+}
+
+.ra-dropfile input[type=file]:hover ~ .info {
+  background-color: #242424;
+  border: 3px #1f569c;
+  border-style: dashed;
+}
+
+.ra-dropfile .info {
+  display: flex;
+  height: 100%;
+  padding: 40px 20px 40px 20px;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: #6d6f80;
+  background-color: #202020;
+
+  border: 3px #5a5c69;
+  border-style: dashed;
+  border-radius: 10px;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+.ra-dropfile .info p {
+  color: #6d6f80;
+}
+
+.ra-dropfile + .light .info {
+  background-color: #eaeaea;
+  border: 3px #5a5c69;
+  border-style: dashed;
+}
+
+.ra-dropfile + .light input[type=file]:hover ~ .info {
+  background-color: #d6d6d6;
+  border: 3px #2e8aff;
+  border-style: dashed;
+}
